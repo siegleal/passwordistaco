@@ -31,4 +31,4 @@ app.get('/points/:id', points);
 
 
 
-var server = app.listen(proces.env.port || 3000);
+var server = app.listen(process.env.port || 3000);
