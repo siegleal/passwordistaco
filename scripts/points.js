@@ -19,7 +19,7 @@ module.exports = function(req, res){
         if (err) return console.error(err);
         if (points.length === 0){
             //read from file
-            client.get('http://localhost:3000/' + week + '.json',
+            client.get('http://localhost:'+listenport+'/' + week + '.json',
                     function(data, response){
                         var jsondata = data.body.player_stats;
 
