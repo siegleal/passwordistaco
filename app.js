@@ -7,6 +7,7 @@ var players = require('./scripts/players')
 var playerid = require('./scripts/playerid')
 var points = require('./scripts/points')
 var utils = require('./scripts/mongooseutil');
+listenport = (process.env.PORT || 3000);
 mongoose = require('mongoose');
 mongoose.connect(utils.url);
 db = mongoose.connection;
@@ -31,4 +32,4 @@ app.get('/points/:id', points);
 
 
 
-var server = app.listen(process.env.PORT || 3000);
+var server = app.listen(listenport);

@@ -63,7 +63,7 @@ module.exports = function(req, res){
         if (players.length === 0){
             console.log("**PLAYERS** Database miss, sending request to /playerId");
 
-            client.get("http://localhost:3000/playerid", playerIdCallback);
+            client.get("http://localhost:"+ listenport +"/playerid", playerIdCallback);
         }else{
             console.log('**PLAYERS** database hit');
             res.json({players: players});
