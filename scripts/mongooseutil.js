@@ -4,7 +4,7 @@ var client = new Client();
 
 module.exports = {
     localurl: 'mongodb://localhost:27017/fantasy',
-    url: "  mongodb://dbuser:password@ds047365.mongolab.com:47365/heroku_prt55l40"
+    url: "  mongodb://dbuser:password@ds047365.mongolab.com:47365/heroku_prt55l40",
     cbsurl: function(endpoint, options){
         return "http://api.cbssports.com/fantasy/" + endpoint + "?version=3.0&SPORT=football&response_format=json" + (options !== undefined ? "&" + options : "");
                 },
