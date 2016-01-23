@@ -67,7 +67,7 @@ module.exports = function(req, res){
                 res.json(pointsData);
             }
             else{
-            client.get('http://localhost:3000/points/' + player_id + '/' + currentweek, function(data, response){
+            client.get('http://localhost:'+listenport+'/points/' + player_id + '/' + currentweek, function(data, response){
                     data = JSON.parse(data.toString('utf8'));
                     pointsData.points.push(data.points);
                     pointsData.seasontotal += data.points.total;
